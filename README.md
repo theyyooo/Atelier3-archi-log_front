@@ -110,3 +110,15 @@ L'intégration continue correspond à un ensemble de méthodes consistant à tes
 
 ## Quels avantages/contraintes présentent cette organisation ?
 
+Avantages et inconvénients que présente l'organisation "Agile" :
+
+- Gagner plus de contrôle sur le produit final.
+- Augmenter l’efficacité.
+- Assurer des livraisons de haute qualité.
+- Accroître la satisfaction des utilisateurs.
+- Générer un retour sur investissement plus élevé
+
+- La minimisation de la documentation dans un développement agile.
+- La complexité de l’adoption de la culture agile.
+- Le manque de prévisibilité de l’approche Agile.
+- La difficulté d'implémentation pour des projets complexes et des entreprises à grande échelle.
