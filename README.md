@@ -2,15 +2,50 @@
 
 
 ## Qu’est ce que le CROSS ORIGIN ? 
+
+Le CROSS ORIGIN est un mécanisme qui consiste à ajouter des en-têtes HTTP afin de permettre à un agent utilisateur d'accéder à des ressources d'un serveur situé sur une autre origine que le site courant. Un agent utilisateur réalise une requête HTTP multi-origine (cross-origin) lorsqu'il demande une ressource provenant d'un domaine, d'un protocole ou d'un port différent de ceux utilisés pour la page courante.
+
 ## En quoi cela est-il dangereux ?
+
+En principe, une Cross-Origin Request est une requête HTTP. Certaines méthodes ne posent en principe aucun problème. GET et HEAD ne peuvent pas modifier les données et ne sont donc généralement pas perçus comme un risque lié à la sécurité. La situation est différente avec PATCH, PUT ou DELETE : ils permettent d'effectuer des interventions nuisibles. Par conséquent, le Cross-Origin Resource Sharing doit également être activé à cette fin. Cela signifie que CORS peut contenir non seulement des informations sur la source autorisée, mais aussi sur les requêtes HTTP autorisées par la source.
+
 ## Comment REACTJS fait-il pour afficher rapidement les modifications sur les composants ?
+
+En créant un DOM virtuel, REACT vient modifier la branche nécessaire sur celui-ci, puis vient calquer la branche modifiée du DOM virtuel sur le DOM "réel".
+
 ## Quelle est la fonction essentielle de REACTJS ?
+
+La réalisation d'une SPA (single page application) : il s'agit d'une application web accessible via une page web unique. Le but est d'éviter le chargement d'une nouvelle page à chaque action demandée, et de fluidifier ainsi l'expérience utilisateur.
+
 ## Quelle est la fonction essentielle de FLUX ?
+
+Flux comporte 4 concepts :
+
+- Les actions, qu'elles proviennent du serveur ou d'une interaction utilisateur.
+- Le dispatcher dans lequel sont envoyées les actions que ce dernier transmet à qui veut, un peu comme un EventEmitter global.
+- Les stores, qui sont l'équivalent du model de l'architecture MVC, ils contiennent les données, et réagissent aux actions que le dispatcher leur transmet.
+- Les views, qui s'occupent du rendu des données dans le DOM, et de lancer des actions lorsque l'utilisateur effectue certaines actions.
+
 ## Qu’est ce que REDUX ?
+
+REDUX est une bibliothèque open-source JavaScript de gestion d'état pour applications web. Elle est plus couramment utilisée avec des bibliothèques comme React ou Angular pour la construction d'interfaces utilisateur, REDUX est très semblable à l'architecture FLUX.
+
 ## Comment faire pour exporter un composant REACTJS ?
+
+Pour exporter un composant REACTJS, nous pouvons utiliser *export* pour exporter spécifiquement ce composant ou bien *export default*.
+
 ## Quelle est la différence entre un test fonctionnel et un test unitaire ?
+
+La principale différence entre les tests unitaires et les tests fonctionnels réside dans le fait que les tests unitaires contrôlent les modules individuels ou les unités du système, tandis que les tests fonctionnels vérifient les fonctionnalités ou les fonctionnalités du système. En bref, le test unitaire est un type de test fonctionnel.
+
 ## A quoi sert la couverture de code ?
+
+La couverture de code est une mesure utilisée pour décrire le taux de code source exécuté d'un programme quand une suite de test est lancée. Un programme avec une haute couverture de code, mesurée en pourcentage, a davantage de code exécuté durant les tests ce qui laisse à penser qu'il a moins de chance de contenir de bugs logiciels non détectés.
+
 ## Qu’est ce qu’un test de non régression ?
+
+Un test de régression, ou test de non-régression, est un test ayant pour but de détecter les régressions introduites dans un logiciel après un changement effectué dans celui-ci.
+
 ## A quoi sert-t-il ?
 
 Il sert à vérifier les regressions de code. Par exemple lors d'une modification d'un élément, il faut s'assurer que la modification n'entraine pas d'autres problèmes.
@@ -22,9 +57,9 @@ Le "test driven" est une méthode de développement logiciel. Cette dernière co
 ## Quels intérêts présentent les micros services comparés aux architecture SOA ?
 
 Les intérêts sont les suivants : 
-- Réduire le temps de développement applicatif
-- Accélérer le déploiement des correctifs
-- Isoler les microservices (si l'un tombe en panne, l'application reste fonctionnelle)
+- Réduire le temps de développement applicatif.
+- Accélérer le déploiement des correctifs.
+- Isoler les microservices (si l'un tombe en panne, l'application reste fonctionnelle).
 
 ## Quelles sont les différences entre les micros services et le SOA ?
 
@@ -45,11 +80,11 @@ Les intérêts sont les suivants :
 ## Quel intérêt présente l’usage de docker et des micro-services ?
 
 L'intérêt est :
-- Facilite le travail en équipe
-- Augmente la qualité globale des applications
+- Facilite le travail en équipe.
+- Augmente la qualité globale des applications.
 - Permet d'utiliser le meilleur langage de programmation en fonction de la problématique.
 - Permet d'automatiser les tests et le déploiement.
-- Augmente la robustesse de l'architecture
+- Augmente la robustesse de l'architecture.
 
 ## Qu’est-ce que docker ?
 
@@ -58,7 +93,7 @@ Docker est une plateforme permettant de créer des conteneurs logiciels. L'inté
 ## En quoi diffère-t-il des méthodes de virtualisation dites classiques (vmware, virtualbox) ?
 
 Les différences sont :
-- Partage du système d'exploitation hôte : conteneurs légers + rapides
+- Partage du système d'exploitation hôte : conteneurs légers et plus rapides.
 - Convient à la situation ou l'on souhaite exécuter plusieurs applications sur un seul noyau de système d'exploitation.
 
 ## Quelle organisation en équipe permet la mise en œuvre de micro services ?
@@ -75,3 +110,15 @@ L'intégration continue correspond à un ensemble de méthodes consistant à tes
 
 ## Quels avantages/contraintes présentent cette organisation ?
 
+Avantages et inconvénients que présente l'organisation "Agile" :
+
+- Gagner plus de contrôle sur le produit final.
+- Augmenter l’efficacité.
+- Assurer des livraisons de haute qualité.
+- Accroître la satisfaction des utilisateurs.
+- Générer un retour sur investissement plus élevé
+
+- La minimisation de la documentation dans un développement agile.
+- La complexité de l’adoption de la culture agile.
+- Le manque de prévisibilité de l’approche Agile.
+- La difficulté d'implémentation pour des projets complexes et des entreprises à grande échelle.
