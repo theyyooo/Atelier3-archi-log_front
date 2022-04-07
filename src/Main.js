@@ -1,14 +1,23 @@
 import React, { useState } from 'react';
 import { Grid, Segment, Menu } from 'semantic-ui-react'
-import { User } from './components/user/containers/User'
-import { UserForm } from './components/userform/UserForm'
+import { User } from './components/exemple-prof/containers/User'
 import globalReducer from './reducers';
 import { createStore } from 'redux';
 import { Provider } from 'react-redux';
-import { Header } from './components/header/Header';
-import { RoomForm } from './components/roomform/RoomForm';
-import { Button } from './components/button/Button';
-import { LoginForm } from './components/userform/LoginForm';
+import { Header } from './components/TOOLS/HEADER/Header';
+import { CreateRoom, RoomForm } from './components/PLAY/CreateRoom';
+import { Button } from './components/MAIN/Button';
+import { LoginForm } from './components/USER/LoginForm';
+import { TableCard } from './components/TOOLS/TableObject';
+import { DisplayCards, NewRoom, PlayRoom } from './components/PLAY/PlayRoom';
+import { DisplayPlay, PlayMain } from './components/PLAY/PlayMain';
+import { ActionMain } from './components/MAIN/ActionMain';
+import { PlayRoomWaitPlayer } from './components/PLAY/playRoomWaitPlayer';
+import { PlayRoomWin } from './components/PLAY/PlayRoomWin';
+import { PlayRoomLose } from './components/PLAY/PlayRoomLose';
+import { PlayMatch } from './components/PLAY/PlayMatch';
+import { UserForm } from './components/USER/UserForm';
+import { Buy } from './components/BUY/Buy';
 
 //create store to exchange data
 const store = createStore(globalReducer, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
@@ -48,50 +57,7 @@ export const Main = (props) => {
 
   return (
     <Provider store={store} >
-      <Header title={"PLAY"} />
-      <RoomForm />
-      <Button title={"Buy"} img={"/buy.svg"} url={"/buy"} />
-      <Button title={"Sell"} img={"/sell.svg"} url={"/sell"} />
-      <Button title={"Play"} img={"/play.svg"} url={"/play"} />
-      <UserForm />
-      <LoginForm/>
-
-
-      {/* <Grid divided='vertically'>
-        <Grid.Row columns={3}>
-        <Grid.Column>
-          <Segment>
-          <UserForm 
-                    handleChange={handleChange}
-                    submitUserHandler={submitUserHandler}>
-                </UserForm>
-          </Segment>
-        </Grid.Column>
-        <Grid.Column>
-            <User 
-                   id={currentUser.id}
-                    surname={currentUser.surname}
-                    lastname={currentUser.lastname}
-                    login={currentUser.login}
-                    pwd={currentUser.pwd}
-                    money={currentUser.money}
-                    img={currentUser.img}
-                    display_type='FULL'>
-            </User>
-        </Grid.Column>
-        <Grid.Column>
-          <User id={currentUser.id}
-                    surname={currentUser.surname}
-                    lastname={currentUser.lastname}
-                    login={currentUser.login}
-                    pwd={currentUser.pwd}
-                    money={currentUser.money}
-                    img={currentUser.img}
-                    display_type='SHORT'>
-          </User>
-        </Grid.Column>
-        </Grid.Row>
-      </Grid> */}
+      <ActionMain/>
     </Provider>
   );
 }
