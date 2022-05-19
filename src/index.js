@@ -8,4 +8,4 @@ import 'semantic-ui-css/semantic.min.css'
 
 //Insert a <Main> component inside the <div id='root'/>
 // send the property title to the App component
-ReactDOM.render(<Main />, document.getElementById('root'));
+ReactDOM.render(<Main/>, document.getElementById('root'));
