@@ -1,9 +1,6 @@
 import React, { useState } from 'react';
-import { useDispatch, useSelector } from "react-redux";
 import { Header } from '../TOOLS/HEADER/Header';
 import { Image } from 'semantic-ui-react';  
-import { TableContainer } from '../TOOLS/TableObject';
-import { DisplayCard } from './DisplayCard';
 
 export const PlayRoomWaitPlayer = (props) => {
     const [form, setForm] = useState({

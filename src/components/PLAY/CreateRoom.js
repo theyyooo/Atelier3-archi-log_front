@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { Form, Button } from 'semantic-ui-react'
-import { useDispatch, useSelector } from "react-redux";
 import { Header } from '../TOOLS/HEADER/Header';
 import { Link } from "react-router-dom";
 import { useNavigate } from 'react-router';
@@ -21,13 +20,8 @@ export const CreateRoom = (props) => {
         setForm({ ...form, [key]: value });
     }
 
-    let current_user = useSelector(state => state.userReducer.user);
-
     const handleSubmit = (event) => {
         if (form.name && form.bet > 0) {
-            if (!current_user.id) {
-                navigate("/login");
-            }
             navigate("/play/" + form.name);
         }
         setMessage("failed")

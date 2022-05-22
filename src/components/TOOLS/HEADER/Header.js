@@ -3,10 +3,13 @@ import { Segment, Grid, Icon, Button } from 'semantic-ui-react'
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";    
 import { useNavigate } from 'react-router';
+import { updateUser } from '../../../actions';
 
 export const Header = ({ title = "Main" }) => {
 
     const navigate = useNavigate();
+
+    const dispatch = useDispatch();
 
     let current_user = useSelector(state => state.userReducer.user);
 
@@ -14,7 +17,6 @@ export const Header = ({ title = "Main" }) => {
         if (current_user.id) {
             return (
                 <>
-                    <h1>{current_user.surname}</h1>
                     <h1>{localStorage.getItem('user')}</h1>
                     <Button onClick={logout} color="blue">Log Out</Button>
                 </>
@@ -30,8 +32,7 @@ export const Header = ({ title = "Main" }) => {
     }
 
     let logout = () => {
-        localStorage.removeItem('user');
-        navigate("/");
+        dispatch(updateUser({}))
     }
 
     let getSolde = () => {

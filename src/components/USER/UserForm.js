@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Form, Header, Button } from 'semantic-ui-react'
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch} from "react-redux";
 import { Header as Head } from '../TOOLS/HEADER/Header';
 import axios from 'axios';
 import { useNavigate } from 'react-router';
@@ -35,7 +35,7 @@ export const UserForm = (props) => {
     }
 
     const handleSubmit = () => {
-        axios.post('http://localhost:8080/register', data)
+        axios.post('http://localhost:8080/auth/register', data)
             .then(data => callbackUserLogin(data))
             .catch(error => console.log('error', error));
     }

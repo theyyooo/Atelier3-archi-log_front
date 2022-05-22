@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import globalReducer from './reducers';
 import { createStore } from 'redux';
 import { Provider } from 'react-redux';

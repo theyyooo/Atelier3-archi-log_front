@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Form, Header, Button } from 'semantic-ui-react';
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { Header as Head } from '../TOOLS/HEADER/Header';
 import { updateUser } from '../../actions';
 import { useNavigate } from 'react-router';
@@ -15,6 +15,8 @@ export const LoginForm = (props) => {
         surname: "",
         pwd: "",
     });
+
+    const [message, setMessage] = useState("");
 
     const data = {
         "surname": form.surname,
@@ -38,13 +40,20 @@ export const LoginForm = (props) => {
 
         axios.post('http://localhost:8080/login', data)
             .then(data => callbackUserLogin(data))
-            .catch(error => console.log('error', error));
+            .catch(error => setMessage("failed"));
 
     }
 
     return (
         <>
             <Head title={"Login"} />
+            {message === 'failed' &&
+                <div class="ui negative message" style={{ textAlign: "center" }}>
+                    <i class="close icon"></i>
+                    <div class="header">We're sorry, your data aren't valid</div>
+                    <p>Please verify your data</p>
+                </div>
+            }
             <div style={{ marginLeft: "25%", marginRight: "25%" }}>
                 <Form>
                     <Header as='h4' dividing>

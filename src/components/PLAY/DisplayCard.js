@@ -1,8 +1,6 @@
-import React, { useState } from 'react';
-import { useDispatch, useSelector } from "react-redux";
-import { Header } from '../TOOLS/HEADER/Header';
-import { Card, Image, Icon } from 'semantic-ui-react';
-import { TableContainer } from '../TOOLS/TableContainer';
+import React from 'react';
+import { useSelector } from "react-redux";
+import { Card, Image } from 'semantic-ui-react';
 
 export const DisplayCard = ({img}) => {
 

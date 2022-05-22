@@ -1,6 +1,5 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Grid, Segment } from 'semantic-ui-react'
-import { useDispatch, useSelector } from "react-redux";
 import { Button } from './Button';
 import { Header } from '../TOOLS/HEADER/Header';
 import { Link } from "react-router-dom";

@@ -1,6 +1,5 @@
-import React, { useState } from 'react';
+import React from 'react';
 import {Image, Button as Btn } from 'semantic-ui-react'
-import { useDispatch, useSelector } from "react-redux";
 
 export const Button = ({ title, img, url }) => {
 

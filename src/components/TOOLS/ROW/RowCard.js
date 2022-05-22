@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
-import { Form, Header, Button, Icon, Label, Menu, Table, ItemDescription } from 'semantic-ui-react'
-import { useDispatch, useSelector } from "react-redux";
+import React from 'react';
+import { Table } from 'semantic-ui-react'
+import { useDispatch} from "react-redux";
 import { updateCurrentCard } from '../../../actions';
 
 export const RowCard = (item) => {  
